@@ -32,7 +32,7 @@ Complete the exercise in the space below:
 */
 
 const isAdult=(ageNum) =>{
-    if(ageNum>=18)
+    if(ageNum>=18 && ageNum >0)
         return "Adult"
     else
         return "Minor"
@@ -67,8 +67,8 @@ const isCharAVowel = (char) =>{ //a, e, i, o, and u
     else
     return false;
 }
-console.log('case 1: Exercise 3 Result (Vowel):', isCharAVowel("a"));
-console.log('case 2: Exercise 3 Result (not Vowel):', isCharAVowel("h"));
+console.log('case 1: Exercise 3 Result (Is Vowel):', isCharAVowel("a"));
+console.log('case 2: Exercise 3 Result (Is not Vowel):', isCharAVowel("h"));
 console.log();
 
 
@@ -196,8 +196,8 @@ const convertTemperature =(temp,string)=>{
 
 }
 
-console.log('case 1 :Exercise 8 Result (C):', convertTemperature(32, "C"));
-console.log('case 2 :Exercise 8 Result {F}:',convertTemperature(32, 'F'));
+console.log('case 1 :Exercise 8 Result (F):', convertTemperature(32, "C"));
+console.log('case 2 :Exercise 8 Result {C}:',convertTemperature(132, 'F'));
 console.log();
 
 
@@ -233,7 +233,6 @@ console.log('case 1 :Exercise 9 Result (subtract):', basicCalculator(10, 5, "sub
 console.log('case 2 :Exercise 9 Result (add):', basicCalculator(10, 5, "add"));
 console.log('case 3 :Exercise 9 Result (multiply):', basicCalculator(10, 5, "multiply"));
 console.log('case 4 :Exercise 9 Result (divide):', basicCalculator(10, 5, "divide"));
-<script defer src="./app.js"></script>
 console.log();
 
 console.log("===== level up =====");
@@ -267,11 +266,11 @@ const calculateGrade = (num)=>{
         return "F"
 
 }
-console.log('Exercise 10 Result:', calculateGrade(90));
-console.log('Exercise 10 Result:', calculateGrade(85));
-console.log('Exercise 10 Result:', calculateGrade(70));
-console.log('Exercise 10 Result:', calculateGrade(69));
-console.log('Exercise 10 Result:', calculateGrade(20));
+console.log('case 1 :Exercise 10 Result:', calculateGrade(90));
+console.log('case 2 :Exercise 10 Result:', calculateGrade(85));
+console.log('case 3 :Exercise 10 Result:', calculateGrade(70));
+console.log('case 4 :Exercise 10 Result:', calculateGrade(69));
+console.log('case 5 :Exercise 10 Result:', calculateGrade(20));
 console.log()
 
 
@@ -292,13 +291,30 @@ Complete the exercise in the space below:
 */
 
 const createUsername=(Fname,Lname)=>{
-    //finish
-
+    return `${Fname.slice(0,3)}${Lname.slice(0,3)}${Fname.length+Lname.length}`;
 }
 
 console.log('Exercise 11 Result:', createUsername("Samantha", "Green"));
 
+console.log()
 
+/*
+Exercise 12: numArgs()
+
+Challenge yourself with numArgs. 
+This function should return the count of arguments passed to it when called.
+
+Complete the exercise in the space below:
+*/
+
+const numArgs =(...num)=>{
+
+    return num.length;
+}
+
+
+console.log('case 1:Exercise 12 Result:', numArgs(1, 2, 3, 4));
+console.log('case 2:Exercise 12 Result:', numArgs("15/jan/2021","5/3/2025"));
 
 
 
